@@ -1,0 +1,34 @@
+{
+  "name": "reverse-dns-lookup",
+  "version": "2.0.0",
+  "description": "🕵 Verify an IP is related to a certain domain",
+  "keywords": [
+    "Reverse",
+    "DNS",
+    "Lookup",
+    "IP",
+    "Verification",
+    "Bot",
+    "source",
+    "verification",
+    "Verifying",
+    "Googlebot",
+    "🕵"
+  ],
+  "license": "Unlicense",
+  "author": "omrilotan",
+  "homepage": "https://github.com/omrilotan/reverse-dns-lookup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/reverse-dns-lookup.git"
+  },
+  "main": "index.js",
+  "bin": "bin.js",
+  "scripts": {
+    "start": "node bin.js",
+    "lint": "standard"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
