@@ -1,6 +1,6 @@
 {
   "name": "reverse-dns-lookup",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "🕵 Verify an IP is related to a certain domain",
   "keywords": [
     "Reverse",
@@ -22,13 +22,36 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/reverse-dns-lookup.git"
   },
-  "main": "index.js",
+  "type": "commonjs",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./index.d.ts": "./index.d.ts",
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "types": "index.d.ts",
   "bin": "bin.js",
+  "files": [
+    "bin.js",
+    "index.js",
+    "index.mjs",
+    "index.d.ts"
+  ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "start": "node bin.js",
-    "lint": "standard"
+    "build": "./scripts/build.sh",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "standard": "^16.0.3"
+    "@types/node": "^20.10.4",
+    "esbuild": "^0.19.9",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
   }
 }
